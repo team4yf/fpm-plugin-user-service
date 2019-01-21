@@ -1,5 +1,6 @@
 'use strict';
 const { Fpm } = require('yf-fpm-server');
+const path = require('path');
 const plugin = require('../src');
 let app = new Fpm()
 const ref = plugin.bind(app)
@@ -19,3 +20,7 @@ app.subscribe('#someevent', (topic, data)=>{
 	console.log(topic, data)
 });
 app.run()
+	.then( fpm => {
+		fpm.M.init(path.join(fpm.get('CWD'), 'sql'))
+    .catch(error => console.error('Startup:error', error.message))
+	});

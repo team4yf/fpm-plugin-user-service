@@ -13,5 +13,5 @@ CREATE TABLE IF NOT EXISTS `sys_securityrole` (
 INSERT INTO `sys_securityrole` (`id`, `title`, `remark`, `parent_id`, `delflag`, `createAt`, `updateAt`) VALUES
 (1, '本地管理员角色', '管理系统的最高权限角色', 0, 0, 0, 0),
 (2, '通用管理员角色', '权限有限制的管理员权限角色', 0, 0, 0, 0),
-(3, '信息中心', '信息中心', 0, 0, 0, 0),
-(4, '运维单位', '运维单位', 0, 0, 0, 0);
+(3, '高级用户', '高级用户', 0, 0, 0, 0),
+(4, '普通用户', '普通用户', 0, 0, 0, 0);

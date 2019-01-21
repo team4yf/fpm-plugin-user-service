@@ -10,12 +10,12 @@
   "author": "yfsoftcom",
   "license": "ISC",
   "dependencies": {
-    "fpm-plugin-rbac-mysql": "0.0.3",
     "lodash": "^4.17.4"
   },
   "devDependencies": {
     "babel-runtime": "^6.26.0",
     "chai": "^3.5.0",
+    "fpm-plugin-rbac-mysql": "0.0.3",
     "fpm-plugin-mysql": "^1.1.4",
     "fpmc-jssdk": "^1.0.4",
     "mocha": "^3.2.0",
