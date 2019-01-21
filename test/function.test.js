@@ -3,8 +3,16 @@ const assert = require('assert');
 init({ appkey:'123123', masterKey:'123123', endpoint: 'http://localhost:9999/api' });
 
 describe('Function', function(){
-  beforeEach(done => {
-    done()
+  this.timeout(30000)
+  before(done => {
+    
+    var func = new Func('user.install');
+    func.invoke()
+      .then(function(data){
+        done();
+      }).catch(function(err){
+        done(err);
+      })
   })
 
 

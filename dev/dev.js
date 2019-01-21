@@ -20,7 +20,3 @@ app.subscribe('#someevent', (topic, data)=>{
 	console.log(topic, data)
 });
 app.run()
-	.then( fpm => {
-		fpm.M.init(path.join(fpm.get('CWD'), 'sql'))
-    .catch(error => console.error('Startup:error', error.message))
-	});

@@ -1,5 +1,6 @@
 const _ = require('lodash');
 const assert = require('assert');
+const path = require('path');
 const {
   encodePassword,
   comparePassword,
@@ -390,7 +391,10 @@ const UserBiz = (fpm) => {
           error: e
         })
       }
-    }
+    },
+    install: async args => {
+      return await fpm.M.init(path.join(__dirname, '..', 'sql'));
+    },
   }
 }
 exports.UserBiz = UserBiz
