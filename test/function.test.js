@@ -5,14 +5,7 @@ init({ appkey:'123123', masterKey:'123123', endpoint: 'http://localhost:9999/api
 describe('Function', function(){
   this.timeout(30000)
   before(done => {
-    
-    var func = new Func('user.install');
-    func.invoke()
-      .then(function(data){
-        done();
-      }).catch(function(err){
-        done(err);
-      })
+    done();
   })
 
 
@@ -22,7 +15,7 @@ describe('Function', function(){
 
   it('login ok', function(done){
     var func = new Func('user.login');
-    func.invoke({account: 'foo1', password: '123123123'})
+    func.invoke({account: 'admin', password: '123123123'})
       .then(function(data){
         console.log(JSON.stringify(data, null, 2))
         done();

@@ -21,5 +21,5 @@ CREATE TABLE IF NOT EXISTS `usr_userinfo` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='用户信息';
 
 INSERT INTO `usr_userinfo` (`id`, `password`, `nickname`, `username`, `email`, `mobile`, `delflag`, `dept`, `createAt`, `gender`, `profile_id`, `desktop_id`, `updateAt`) VALUES
-(1, '7e4d92b7cbaaf24605090282380654ce', 'admin', 'admin', 'zyh1985200@yahoo.com.cn', '18626367704', 0, 1, 1526370965088, 1, 1, 1, 0),
-(2, '7e4d92b7cbaaf24605090282380654ce', '夏英伟', 'xyw', 'betterxiayw@126.com', '13942602228', 0, 1, 1526370965088, 1, 1, 1, 0);
+(1, 'a1c8c73885cb1ccdd83f369b709563a2', 'admin', 'admin', 'zyh1985200@yahoo.com.cn', '18626367704', 0, 1, 1526370965088, 1, 1, 1, 0),
+(2, 'a1c8c73885cb1ccdd83f369b709563a2', '夏英伟', 'xyw', 'betterxiayw@126.com', '13942602228', 0, 1, 1526370965088, 1, 1, 1, 0);

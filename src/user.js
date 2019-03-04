@@ -1,6 +1,5 @@
 const _ = require('lodash');
 const assert = require('assert');
-const path = require('path');
 const {
   encodePassword,
   comparePassword,
@@ -191,9 +190,12 @@ const UserBiz = (fpm) => {
           id: loginInfo.dept
         })
         loginInfo.obs = obsInfo
-        const rbac = await fpm.rbacFactory.getRbac(obsInfo.role_id)
-        loginInfo.rbac = rbac.getAcl()
-        loginInfo.role = rbac.getRole()
+        if(fpm.rbacFactory){
+          const rbac = await fpm.rbacFactory.getRbac(obsInfo.role_id)
+          loginInfo.rbac = rbac.getAcl()
+          loginInfo.role = rbac.getRole()
+        }
+
 
         loginInfo.profile = await fpm.M.getAsync({
           table: 'usr_profile',
@@ -329,7 +331,7 @@ const UserBiz = (fpm) => {
           table: 'usr_userinfo',
           condition: `${ args.field } = '${ args.value} '`
         })
-        return count < 1 ? Promise.resolve(1) : Promise.reject(0)
+        return count < 1 ? 1 : Promise.reject(0)
       } catch (e) {
         fpm.logger.error(e)
         return Promise.reject({
@@ -382,7 +384,7 @@ const UserBiz = (fpm) => {
           row: row,
           condition: `id = ${args.id}`,
         })
-        return Promise.resolve(result)
+        return result
       } catch (e) {
         fpm.logger.error(e)
         return Promise.reject({
@@ -391,10 +393,7 @@ const UserBiz = (fpm) => {
           error: e
         })
       }
-    },
-    install: async args => {
-      return await fpm.M.init(path.join(__dirname, '..', 'sql'));
-    },
+    }
   }
 }
 exports.UserBiz = UserBiz
