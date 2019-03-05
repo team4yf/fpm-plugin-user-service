@@ -1,5 +1,8 @@
 dev/
-sql/
 views/
+test/
+init.sql
+docker-*.dev.yml
 db.lock
 .babelrc
+config.json
