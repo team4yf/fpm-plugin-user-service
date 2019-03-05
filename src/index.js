@@ -5,7 +5,6 @@ module.exports = {
   bind: (fpm) => {
     // WHEN TO INSTALL THE SQL Scripts??    
     const bizModule = UserBiz(fpm);
-    console.log(bizModule)
     fpm.registerAction('BEFORE_SERVER_START', () => {
       fpm.extendModule('user', bizModule) ;
       // Run the sql file
