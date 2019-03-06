@@ -20,3 +20,8 @@ app.subscribe('#someevent', (topic, data)=>{
 	console.log(topic, data)
 });
 app.run()
+	.then(() => {
+		ref.mock()
+			.then(console.log)
+			.catch(console.error)
+	})

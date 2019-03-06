@@ -15,7 +15,4 @@ CREATE TABLE IF NOT EXISTS `usr_widget` (
   `createAt` bigint(20) NOT NULL DEFAULT '0',
   `updateAt` bigint(20) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='用户仪表板';
-
-INSERT INTO `usr_widget` (`id`, `name`, `title`, `remark`, `height`, `width`, `visible`, `ds`, `link`, `desktop_id`, `type`, `delflag`, `createAt`, `updateAt`) VALUES
-(1, 'notice', '公告栏', 'oa的公告栏，可由管理员于后台发布后，滚动显示在仪表板上', 200, 350, 1, 'c?s=common&o=notice', 'http://www.baidu.com', 1, 'notice', 0, 0, 0);
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='用户仪表板';

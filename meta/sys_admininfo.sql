@@ -11,7 +11,4 @@ CREATE TABLE IF NOT EXISTS `sys_admininfo` (
   `tryLoginTimes` int(4) NOT NULL DEFAULT '0',
   `encodeType` varchar(50) NOT NULL DEFAULT 'md5',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-
-INSERT INTO `sys_admininfo` (`id`, `delflag`, `createAt`, `updateAt`, `loginName`, `loginPass`, `lastLoginAt`, `lastLoginIP`, `tryLoginTimes`, `encodeType`) VALUES
-(1, 0, 0, 0, 'admin', '21232f297a57a5a743894a0e4a801fc3', 0, '0.0.0.0', 0, 'md5');
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;

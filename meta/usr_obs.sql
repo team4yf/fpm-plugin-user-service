@@ -15,9 +15,4 @@ CREATE TABLE IF NOT EXISTS `usr_obs` (
   `createAt` bigint(20) NOT NULL DEFAULT '0',
   `updateAt` bigint(20) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='企业OBS架构';
-
-INSERT INTO `usr_obs` (`id`, `name`, `pid`, `code`, `is_virtual`, `role_id`, `profile_id`, `desktop_id`, `delflag`, `createAt`, `updateAt`) VALUES
-(1, '系统管理员', 0, 'LOCAL_ADMIN', 1, 2, 1, 1, 0, 0, 0),
-(2, '项目经理', 0, 'MANAGER', 0, 3, 1, 1, 0, 0, 0),
-(3, '操作员', 0, 'OPERATER', 0, 4, 1, 1, 0, 0, 0);
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='企业OBS架构';

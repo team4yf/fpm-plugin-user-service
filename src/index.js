@@ -6,15 +6,13 @@ module.exports = {
     // WHEN TO INSTALL THE SQL Scripts??    
     const bizModule = UserBiz(fpm);
     fpm.registerAction('BEFORE_SERVER_START', () => {
-      fpm.extendModule('user', bizModule) ;
+      fpm.extendModule('user', bizModule);
       // Run the sql file
       if(fpm.M){
-        fpm.M.install(path.join(__dirname, '../sql'))
-        .then(() => {
-          // startup();
-        })
+        fpm.M.install(path.join(__dirname, '../meta'))
         .catch(e => {
           fpm.logger.error(e);
+          throw new Error('Install Plugin fpm-plugin-user-server Error! Cant run the meta/*.sql files successlly!')
         })
       }
     })

@@ -11,6 +11,4 @@ CREATE TABLE IF NOT EXISTS `usr_desktop` (
   `updateAt` bigint(20) NOT NULL DEFAULT '0',
   `entry_url` varchar(200) NOT NULL DEFAULT '/',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='用户工作台';
-INSERT INTO `usr_desktop` (`id`, `name`, `title`, `remark`, `group_id`, `sort_index`, `delflag`, `createAt`, `updateAt`, `entry_url`) VALUES
-(1, 'Default-Desktop', '默认工作台', '系统默认工作台', 1, 1, 0, 0, 0, '/setting/area');
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='用户工作台';

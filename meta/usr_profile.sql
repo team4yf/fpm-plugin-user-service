@@ -7,8 +7,4 @@ CREATE TABLE IF NOT EXISTS `usr_profile` (
   `createAt` bigint(20) NOT NULL DEFAULT '0',
   `updateAt` bigint(20) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
-
-
-INSERT INTO `usr_profile` (`id`, `profile`, `name`, `delflag`, `createAt`, `updateAt`) VALUES
-(1, '{\"dateformat\":\"yyyy-mm-dd\",\"mdl_report\":\"m_user desc\"}', '默认系统配置', 0, 0, 0);
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;

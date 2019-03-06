@@ -1,5 +1,6 @@
 const _ = require('lodash');
 const assert = require('assert');
+const path = require('path');
 const {
   encodePassword,
   comparePassword,
@@ -393,7 +394,18 @@ const UserBiz = (fpm) => {
           error: e
         })
       }
-    }
+    },
+    mock: async () => {
+      try {
+        await fpm.M.install(path.join(__dirname, '../mock'))  
+        return 1;
+      } catch (error) {
+        fpm.logger.error(error);
+        return Promise.reject({
+          message: 'Install Plugin fpm-plugin-user-server Error! Cant run the meta/*.sql files successlly!'
+        });
+      }
+    },
   }
 }
 exports.UserBiz = UserBiz
