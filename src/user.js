@@ -1,5 +1,5 @@
 const _ = require('lodash');
-const assert = require('assert');
+
 const path = require('path');
 const {
   encodePassword,
@@ -10,7 +10,6 @@ const {
 } = require('./kit');
 
 const UserBiz = (fpm) => {
-  assert.strictEqual(fpm.M === undefined, false, 'FPM-PLUGIN-MYSQL required!' )
   return {
     // for admin login
     adminLogin: async (args, ctx) => {
